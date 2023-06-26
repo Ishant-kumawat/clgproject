@@ -1,0 +1,174 @@
+<style>
+    .grid-container {
+  display: grid;
+  grid-template-columns: 70% 30%; 
+  grid-gap: 10px; 
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu li a:visited {
+    text-decoration: underline;
+  }
+
+</style>
+<p>Home / Training & Certificates / Training / Figma UI Tutorial</p>
+
+
+
+
+<div class="grid-container">
+    <div >
+        
+      <h4>Figma UI Tutorial</h4>
+    <p>Created By Walt Miller</p>
+
+
+    <iframe style="border-radius: 4px;margin-left: 1.5%;" width="95%" height="70%" src="https://www.youtube.com/embed/-mbYAj5hvLs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   
+
+
+
+    <div class="reviews-container">
+      <div *ngFor="let review of reviews" (click)="openReview(review)" [ngClass]="{'selected-review': selectedReview === review}" class="review-item">
+        {{ review.title }}
+      </div>
+    </div>
+      
+
+    
+   
+    <hr>
+    <div class="selected-review" *ngIf="selectedReview">
+
+      <ng-container *ngIf="selectedReview.title === 'Review'">
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="assets/images/Sergio.jpg" alt="Image Description">
+          </div>
+          <div class="profile-details">
+            <h4>Sergio Aquinna</h4>
+            <ngb-rating [max]="5"></ngb-rating>
+            
+            <p>I have over 5 years of experience working on design, and my new job required me to skill up on usability testing. The instructor (Nancy)
+              thoroughly covered all the topics as well as the practical assignments reinforce the concepts. Highly recommend!
+              </p>
+          </div>         
+        </div>
+        <hr>
+        <!--  -->
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="assets/images/Rizal.jpeg" >
+          </div>
+          <div class="profile-details">
+            <h4>Rizal Gradian</h4>
+            <ngb-rating  [max]="5"></ngb-rating>
+          
+            <p>I have over 5 years of experience working on design, and my new job required me to skill up on usability testing. The instructor (Nancy)
+              thoroughly covered all the topics as well as the practical assignments reinforce the concepts. Highly recommend!</p>
+          </div>         
+        </div>
+        <hr>
+        <!--  -->
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="assets/images/virat.jpeg" alt="Image Description">
+          </div>
+          <div class="profile-details">
+            <h4>Virat Kolhi</h4>
+            <ngb-rating  [max]="5" ></ngb-rating>
+           
+            
+            <p>I have over 5 years of experience working on design, and my new job required me to skill up on usability testing. The instructor (Nancy)
+              thoroughly covered all the topics as well as the practical assignments reinforce the concepts. Highly recommend!
+              </p>
+          </div>         
+        </div>
+        <hr>
+        <br><br>
+        <div style="display: flex; justify-content: center;">
+          <button class="btn btn-white" style="width: 150px; border-radius: 2px; border-color: black;">See more reviews</button>
+        </div>
+        
+      </ng-container>
+
+
+      <ng-container *ngIf="selectedReview.title === 'Resources'">
+        <h2 class="review-description">{{ selectedReview.description.split('\n')[0] }}</h2>
+        <p class="review-description">{{ selectedReview.description.substring(selectedReview.description.indexOf('\n') + 1) }}</p>
+        <h2 class="review-description">Images</h2>
+        <p>Hero Image: © Daniel Skrok and the Interaction Design Foundation, CC BY-NC-SA 3.0.</p><br><br>
+      </ng-container>
+
+
+      <p class="review-description" *ngIf="selectedReview.title !== 'Resources'">{{ selectedReview.description }}</p>
+
+
+      
+      <ng-container *ngIf="selectedReview.title === 'Submission'">
+        <h3>Figma UI Tutorial</h3>
+        <p>Topics: UX, Interface, User research, User persona, Empathy mapping and Affinity mapping<br>
+          357 people took this</p>
+        <h3>Task to be done</h3>  
+        <p>Design a super-app, a mobile application that provides multiple services including payment and financial transaction processing, effectively
+          becoming an all-encompassing self-contained banking, commerce, and communication online platform that embraces many aspects of personal
+          and commercial life. A one-stop app for all personal and financial requirements of an individual.</p>
+        <h3>Before You Submit</h3>
+        <ul>
+          <li>You must complete this assessment in one session - make sure your internte is reliable.</li>
+          <li>You need to check all the sections are attemped</li>
+        </ul>
+        <h3>Please add your completed work :</h3>
+        <textarea class="uploadarea" name="add text" id="submitone" cols="30" rows="10" placeholder="Upload Your Files here"></textarea><br>
+        <button class="btn btn-dark" style="float: right; width: 150px;">Submit</button>
+      </ng-container>
+    </div>
+
+  
+    </div>
+
+
+    <div >
+        <h4>About the course</h4><br>
+        <div class="profile-container">
+          <div class="profile-image">
+            <img src="assets/images/Waltmiller.jpeg" alt="Image Description">
+          </div><br>
+          <div class="profile-details">
+            <h4>Walt Miller</h4>
+            <p>Product Designer</p>
+          </div>
+        </div>
+        <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Neque, deserunt odit. Quam, fugiat? Temporibus fuga <br>beatae voluptate</p>
+        <button class="btn btn-dark" style="width: 240px;">Notes</button><br><br>
+        <textarea class="addnotes" name="add text" id="" cols="30" rows="10" placeholder="Add Notes"></textarea><br><br>
+        <button class="btn btn-dark" id="savebutton">Save Notes</button>
+        <br>
+        <br>
+
+        <h4>My Notes</h4><br>
+        <p  style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, similique incidunt reiciendis ut eligendi perspiciatis odio accusantium a.
+             Libero necessitatibus repellat consequuntur nostrum quam, consectetur temporibus magnam doloremque suscipit doloribus.
+            <a style="text-decoration: none;color: black;" mat-button (click)="openPopup()">Read more</a></p>
+            <br>
+            <h4>use of usability</h4>
+            <p  style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, similique incidunt reiciendis ut eligendi perspiciatis odio accusantium a.
+             Libero necessitatibus repellat consequuntur nostrum quam, consectetur temporibus magnam doloremque suscipit doloribus.
+            <a style="text-decoration: none;color: black;" mat-button (click)="openPopup()">Read more</a></p>
+    </div> 
+</div>

@@ -1,0 +1,322 @@
+
+<style>
+    .grid-container {
+   
+   display: grid;
+   grid-template-columns: auto auto auto;
+   
+   }
+   
+   .container {
+   display: grid;
+   grid-template-columns: auto auto;
+   }
+   
+   .column1 {
+   margin-right: 50px;
+   padding-top: 20px;
+   }
+   
+   .tool li {
+   list-style: none;
+   float: left;
+   margin: 0%
+   }
+   
+   .card {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #fff;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px 0;
+   }
+   .col-lg-2{
+     width: 100%;
+   }
+   
+   .card img {
+   width: 60px;
+   height: 60px;
+   border-radius: 3px;
+   
+   }
+   
+   .card-content {
+   flex: 1;
+   max-width: 500px;
+   }
+   
+   .card-content h2 {
+   font-size: 24px;
+   margin: 0 0 10px 0;
+   }
+   
+   .card-content p {
+   font-size: 18px;
+   line-height: 1.5;
+   margin: 0;
+   }
+   
+   .card-text {
+   color: grey;
+   }
+   
+   .wrapper {
+   border: 1px solid green;
+   padding: 0;
+   }
+   
+   .wrapper-pad {
+   padding: 1em;
+   }
+   
+   .item1 {
+   width: 90px;
+   }
+   
+   .item2 {
+   grid-column: 2/3;
+   }
+   
+   .item3 {
+   grid-column: 3/3;
+   margin-left: 15%;
+   
+   }
+   
+   .sidebar {
+   width: 200px;
+   background-color: white;
+   margin-top: 6.9px;
+   width: 300px;
+   
+   
+   
+   }
+   
+   .sidebar ul {
+   list-style: none;
+   padding: 0;
+   padding-right: 10px;
+   
+   }
+   
+   .sidebar li {
+   /* margin-bottom: 10px; */
+   border: 1px solid;
+   border-color: gray;
+   }
+   
+   .sidebar li a {
+   display: block;
+   padding: 5px;
+   text-decoration: none;
+   color: #333;
+   height: 45px;
+   }
+   
+   .sidebar li a:hover {
+   background-color: black;
+   color: white;
+   }
+   
+   .certitab{
+   color: grey;
+   padding-left: 110px;
+   padding-top: 20px;
+   }
+     @media (max-width: 768px) {
+       .custom-col {
+         flex-basis: 100%;
+         max-width: 100%;
+         margin-bottom: 10px;
+       }
+     }
+   
+   </style>
+   
+   <p class = "certitab">Home / Training&Certifications / Training</p>
+   <div class="container">
+       <div class="column1">
+   
+           <Strong>Resouces Categories</Strong>
+           <div style="padding-top: 40px;">
+           </div>
+           <div class="sidebar">
+               <ul>
+                   <li><a href="#">Development</a></li>
+                   <li><a href="#">Business</a></li>
+                   <li><a href="#">Finance & Accounting</a></li>
+                   <li><a href="#">Design</a></li>
+                   <li><a href="#">Human Resouces</a></li>
+                   <li><a href="#">Marketing</a></li>
+               </ul>
+           </div>
+       </div>
+   
+       <div class="column2">
+           <div class="tool">
+   
+   
+               <ul id="train">
+                   <li><a href="" style="text-decoration: none;  font-size: large; color: black;">Training</a></li>
+                   <li><a href="" style="text-decoration: none; font-size: large; color: black;padding-left: 50px;">Certifications</a></li>
+               </ul>
+   
+               <select name="select" id="checkboc" style="float: right;">
+                   <option value="">Sort By Newest</option>
+                   <option value="">Sory By Oldest</option>
+               </select>
+           </div>
+           <div style="padding-top: 50px;">
+             <div class="card">
+               <div class="grid-container">
+                 <div class="item1">
+                   <img src="assets/images/1.png" class="img-fluid rounded-start" alt="...">
+                 </div>
+                 <div class="item2">
+                   <h5 class="card-title">User Experience Design</h5>
+                   <p class="card-text">What we learn: Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System, Library and assets setup, etc.</p>
+                   <div class="row d-flex justify-content-left">
+                     <div class="col-lg-2">
+                       Video: <strong>231 Hrs</strong>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="item3">
+                  <button class="btn btn-dark" (click)="startTraining()" href="/src/index.html">Start Training</button>
+
+
+                 </div>
+               </div>
+               
+             </div>
+             
+   
+               <div class="card">
+                 <div class="grid-container">
+                   <div class="item1">
+                     <img src="assets/images/2.png" class="img-fluid rounded-start" alt="...">
+                   </div>
+                   <div class="item2">
+                     <h5 class="card-title">User Experience Design</h5>
+                     <p class="card-text">What we learn: Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System, Library and assets setup, etc.</p>
+                     <div class="row d-flex justify-content-left">
+                       <div class="col-lg-2">
+                         Video: <strong>231 Hrs</strong>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="item3">
+                    <button class="btn btn-dark" (click)="onSelect()" >Start Training</button>
+                   
+                   </div>
+                 </div>
+               </div>
+               
+             <div class="card">
+               <div class="grid-container">
+                   <div class="item1"><img src="assets/images/1.png" class="img-fluid rounded-start" alt="...">
+                   </div>
+                   <div class="item2">
+                       <h5 class="card-title">Learn and Create Navigation bar in Figma using Variants
+                       </h5>
+                       <p class="card-text">What we learn:- Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System,
+                         Library and assets setup etc.,
+                         </p>
+                       <div class="row d-flex justify-content-left">
+                           <div class="col-lg-2 " >Video : <strong>231 Hrs</strong>
+                            
+                           </div>
+   
+                          
+                           
+                       </div>
+                   </div>
+                   <div class="item3">
+                    <button class="btn btn-dark" >Start Training</button>
+                   </div>
+               </div>
+           </div>
+   
+           <div class="card">
+             <div class="grid-container">
+                 <div class="item1"><img src="assets/images/3.png" class="img-fluid rounded-start" alt="...">
+                 </div>
+                 <div class="item2">
+                     <h5 class="card-title">UI Sitemap</h5>
+                     <p class="card-text">What we learn:- Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System,
+                       Library and assets setup etc.,
+                       </p>
+                     <div class="row d-flex justify-content-left">
+                         <div class="col-lg-2 " >Video : <strong>231 Hrs</strong>
+                             
+                         </div>
+   
+                        
+                         
+                     </div>
+                 </div>
+                 <div class="item3">
+                  <button class="btn btn-dark">Start Training</button>
+                 </div>
+             </div>
+         </div>
+   
+         <div class="card">
+           <div class="grid-container">
+               <div class="item1"><img src="assets/images/2.png" class="img-fluid rounded-start" alt="...">
+               </div>
+               <div class="item2">
+                   <h5 class="card-title">Design & Prototype Adobe XD
+                   </h5>
+                   <p class="card-text">What we learn: Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System,
+                     Library and assets setup etc.,
+                     </p>
+                   <div class="row d-flex justify-content-left">
+                       <div class="col-lg-2 " >Video : <strong>231 Hrs</strong>
+                           
+                       </div>
+   
+                      
+                       
+                   </div>
+               </div>
+               <div class="item3">
+                <button class="btn btn-dark">Start Training</button>
+               </div>
+           </div>
+       </div>
+   
+       <div class="card">
+         <div class="grid-container">
+             <div class="item1"><img src="assets/images/3.png" class="img-fluid rounded-start" alt="...">
+             </div>
+             <div class="item2">
+                 <h5 class="card-title">Figma UI Tutorial
+                 </h5>
+                 <p class="card-text">What we learn:- Tools, Autolayout, Component, Responsive Design, Prototyping, Variants, Design System,
+                   Library and assets setup etc.,
+                   </p>
+                 <div class="row d-flex justify-content-left">
+                     <div class="col-lg-2 " >Video : <strong>231 Hrs</strong>
+                         
+                     </div>
+   
+                    
+                     
+                 </div>
+             </div>
+             <div class="item3">
+              <button class="btn btn-dark">Start Training</button>
+             </div>
+         </div>
+     </div>
+           </div>
+
+          </div>
+        </div>           
+        

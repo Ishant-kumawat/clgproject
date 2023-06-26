@@ -1,0 +1,94 @@
+.reviews-container {
+    display: flex;
+  }
+  .reviews-container {
+    display: flex;
+  }
+  
+  .review-item {
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .review-item.selected-review::after {
+    font-size: x-large;
+    color: black;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.986);
+  }
+
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-image {
+    margin-right: 10px; /* Adjust the spacing between the image and text */
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .review-item {
+ 
+   
+    padding: 10px;
+    
+    cursor: pointer;
+  }
+  
+  .review-item:last-child {
+    margin-right: 0;
+  }
+  
+  .selected-review {
+    margin-top: 20px;
+    
+    padding: 10px;
+  }
+  .review-description {
+    text-align: justify;
+    white-space: pre-line;
+  }
+.addnotes{
+    border-radius: 5px; resize: none;
+    border: 2px solid black; 
+    border-radius: 20px; 
+    padding: 10px; 
+    width: 400px; 
+    height: 150px; 
+    font-size: 14px; 
+} 
+
+.uploadarea{
+    border-radius: 5px; resize: none;
+   
+    
+    padding: 10px; 
+    width:100%; 
+    height: 170px; 
+    font-size: 14px; 
+}
+
+#savebutton{
+    width: 400px;
+}
+  
+ngb-rating{
+    color: rgba(15, 17, 17, 0.917);
+    font-size: 30px;
+}
+  
+  
+  
